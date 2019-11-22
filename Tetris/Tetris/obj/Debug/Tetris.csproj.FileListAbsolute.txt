@@ -1,0 +1,8 @@
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\bin\Debug\SecondTetris.exe.config
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\bin\Debug\SecondTetris.exe
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\bin\Debug\SecondTetris.pdb
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.csprojAssemblyReference.cache
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.exe
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.pdb
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.csproj.ResolveComReference.cache
