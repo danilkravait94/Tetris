@@ -16,14 +16,13 @@ namespace Tetris
         public static int NumberOfForm1, NumberOfForm;
         static BaseTetris form;
         static BaseTetris nextform;
-        public static ConsoleKeyInfo key;
+        public static ConsoleKeyInfo k;
         public static bool isKeyPressed = false;
         public static bool Padaet = false;
-        public SoundPlayer Z = new SoundPlayer(@"tetris.wav");
+        public static SoundPlayer splayer = new SoundPlayer();
 
         static void Main()
         {
-            SoundPlayer splayer = new SoundPlayer();
             splayer.SoundLocation = Environment.CurrentDirectory + "\\01. Main Menu.wav";
             splayer.PlayLooping();
 
@@ -59,15 +58,16 @@ namespace Tetris
             splayer.Stop();
             splayer.SoundLocation = Environment.CurrentDirectory + "\\05. Results.wav";
             splayer.Play();
+            System.Threading.Thread.Sleep(1000);
 
             Console.Clear();
             Console.SetCursorPosition(5, 5);
             Console.WriteLine("Game Over \n\t Replay? (Y/N)");
             Console.SetCursorPosition(5, 7);
             Console.WriteLine("Your score: " + score);
-            string input = Console.ReadLine();
+            k = Console.ReadKey();
 
-            if (input == "y" || input == "Y")
+            if (Program.k.Key == ConsoleKey.Y)
             {
                 pole = new int[20, 10];
                 timer = new Stopwatch();
@@ -119,13 +119,12 @@ namespace Tetris
                     }
                     else
                     {
-
                         Console.Write(" ");
                     }
                 }
             }
         }
-        static void Perezapysk()
+        private static void Perezapysk()
         {
             while (true)
             {
@@ -150,7 +149,28 @@ namespace Tetris
                     if (pole[0, i] == 2)
                         return;
                 }
-                Doings();
+                Random gom = new Random();
+                int f = gom.Next(0, 6);
+                switch (f)
+                {
+                    case 0: ;
+                        Doings(37); break;
+                    case 1: Doings(32); break;
+                    case 2: Doings(39); break;
+                    case 3: Doings(40); break;
+                    case 4: Doings(48); break;
+                    case 5: Doings(39); break;
+                    default: Doings(27); break;
+
+                }
+                //if (Console.KeyAvailable)
+                //{
+                //    key = Console.ReadKey();
+                //    isKeyPressed = true; Doings(key);
+                //}
+                //else
+                //    isKeyPressed = false;
+                //Doings();
                 ClearBlock();
             }
         }
@@ -233,17 +253,9 @@ namespace Tetris
             dropRate = 300 - 22 * level;
 
         }
-        public static void Doings()
+        public static void Doings(int str)
         {
-            if (Console.KeyAvailable)
-            {
-                key = Console.ReadKey();
-                isKeyPressed = true;
-            }
-            else
-                isKeyPressed = false;
-
-            if (Program.key.Key == ConsoleKey.LeftArrow & !form.cheto_cleva() & isKeyPressed)
+            if (str == 37 & !form.cheto_cleva() /*& isKeyPressed*/)
             {
                 for (int i = 0; i < 4; i++)
                 {
@@ -251,7 +263,7 @@ namespace Tetris
                 }
                 form.Smena();
             }
-            if (Program.key.Key == ConsoleKey.RightArrow & !form.cheto_cprava() & isKeyPressed)
+            if (str == 39 & !form.cheto_cprava() /*& isKeyPressed*/)
             {
                 for (int i = 0; i < 4; i++)
                 {
@@ -259,21 +271,35 @@ namespace Tetris
                 }
                 form.Smena();
             }
-            if (Program.key.Key == ConsoleKey.DownArrow & isKeyPressed)
+            if (str == 40 /*& isKeyPressed*/)
             {
                 form.Fall();
 
             }
-            if (Program.key.Key == ConsoleKey.Spacebar & isKeyPressed)
+            if (str == 32 /*& isKeyPressed*/)
             {
                 form.Rotate();
 
             }
-            if (Program.key.Key == ConsoleKey.UpArrow & !form.cheTo_c_nizy() & isKeyPressed)
+            if (str == 38 & !form.cheTo_c_nizy() /*& isKeyPressed*/)
             {
                 while (form.cheTo_c_nizy() != true)
                 {
                     form.Fall();
+                }
+            }
+            if (str == 27 /*& isKeyPressed*/)
+            {
+                splayer.Stop();
+                for (int i = 0; i < 1000; i++)
+                {
+                    System.Threading.Thread.Sleep(1000);
+                   if (Console.KeyAvailable)
+                        {
+                            k = Console.ReadKey();
+                        if (str == 27) {  splayer.Play(); splayer.SoundLocation = Environment.CurrentDirectory + "\\01. Main Menu.wav";
+                            splayer.PlayLooping(); break; }
+                        }
                 }
             }
 

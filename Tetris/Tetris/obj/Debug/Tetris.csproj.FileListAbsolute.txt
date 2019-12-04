@@ -6,3 +6,11 @@ C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.
 C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.pdb
 C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\Interop.MediaPlayer.dll
 C:\Users\Олег\source\repos\SecondTetris\SecondTetris\obj\Debug\SecondTetris.csproj.ResolveComReference.cache
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\bin\Debug\SecondTetris.exe.config
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\bin\Debug\SecondTetris.exe
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\bin\Debug\SecondTetris.pdb
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\obj\Debug\Tetris.csprojAssemblyReference.cache
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\obj\Debug\Interop.MediaPlayer.dll
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\obj\Debug\Tetris.csproj.ResolveComReference.cache
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\obj\Debug\SecondTetris.exe
+C:\Users\Олег\Documents\GitHub\Mytetris\Tetris\Tetris\obj\Debug\SecondTetris.pdb

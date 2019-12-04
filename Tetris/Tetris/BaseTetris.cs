@@ -66,7 +66,7 @@ namespace Tetris
             {
                 for (int f = 0; f < 10; f++)
                 {
-                    if (Program.pole[i, f] != 2) Program.pole[i, f] = 0;
+                    if (Program.pole[i, f] != 2 && Program.pole[i, f] != -1) Program.pole[i, f] = 0;//тут поменял
                 }
             }
             for (int i = 0; i < 4; i++)
